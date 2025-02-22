@@ -1,0 +1,9 @@
+To fix this, use two separate rules: one for list items and another for elements with the `special` class:
+
+```css
+li { color: blue; }
+ul { color: red; }
+.special { color: green; }
+```
+
+This approach ensures that all elements with the class `special` are styled green, regardless of their parent element type.
