@@ -1,0 +1,9 @@
+The following CSS rule intends to style list items, but due to a typo in the selector, it's not working as expected:
+
+```css
+li { color: blue; }
+ul { color: red; }
+li.special { color: green; }
+```
+
+The typo is in `li.special`.  While it *appears* correct, if the `.special` class is applied to an element that's *not* a list item (`<li>`), this rule won't apply.  The selector `li.special` requires the element to be both a list item *and* have the class `special`. If a `div` element has `class="special"`, it won't be styled green.
